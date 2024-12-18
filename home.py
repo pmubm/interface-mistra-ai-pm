@@ -15,7 +15,8 @@ st.write("""
  `print("Hello World")`
 """)
 
-         
+st.text_inpit("Quel est votre nom ?")
+
 # Creation d'un bouton
 
         
