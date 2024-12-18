@@ -76,7 +76,7 @@ elif selection == "Sentiment":
         st.session_state.messages.append({"role": "assistant", "content": response})
 
 elif selection == "Scrum":
-    st.title("Echo Bot : Entitee")
+    st.title("Echo Bot : Scrum")
     # React to user input
     if prompt := st.chat_input("Ecrivez à l'Agent Scrum"):
         # Display user message in chat message container
