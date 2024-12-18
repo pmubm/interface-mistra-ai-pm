@@ -2,7 +2,7 @@ import streamlit as st
 from utiles import *
 from mistralai import Mistral
 
-api_keys =st.text_imput("3yXPMZeegB0VuKlWur6DFjdyVRGkzwzz")
+api_keys =st.text_imput("api_keys")
 client = Mistral(api_keys)
 
 prompt = st.test_area("""
