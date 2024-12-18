@@ -38,7 +38,7 @@ if selection == "Traduction":
         #response = get_ner(client, prompt)
         response, last_interactions = get_agent_response(client, prompt)
         traduction_results = eval(response)
-        print(traduction_results)
+        #print(traduction_results)
 
 
 
