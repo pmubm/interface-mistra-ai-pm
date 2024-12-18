@@ -129,7 +129,7 @@ def get_sentiment(client,prompt):
     return eval(response.choices[0].message.content)
 
 
-def get_agent_response(client,prompt:str='Qui es-tu ?', last_interactions=[], client):
+def get_agent_response(client,prompt:str='Qui es-tu ?', last_interactions=[]):
     """ 
     Fonction qui retourne la réponse de l'agent et l'historique des interactions.
     """
