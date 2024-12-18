@@ -21,12 +21,21 @@ for message in st.session_state.messages:
         st.markdown(message["content"])
 
 
-
 # Fonction pour convertir les messages en DataFrame
 def messages_to_csv(messages):
     data = [{"Role": msg["role"], "Message": msg["content"]} for msg in messages]
     df = pd.DataFrame(data)
     return df.to_csv(index=False).encode("utf-8")
+
+# Ajouter un bouton pour télécharger l'historique
+if st.session_state.messages:
+    csv = messages_to_csv(st.session_state.messages)
+    st.download_button(
+        label="Télécharger l'historique au format CSV",
+        data=csv,
+        file_name="chat_history.csv",
+        mime="text/csv",
+    )
 
 
 
@@ -94,18 +103,3 @@ elif selection == "Scrum":
         #print(traduction_results)
 
 
-
-        # Afficher les messages et ajouter le bouton de téléchargement
-if st.session_state.messages:
-    for message in st.session_state.messages:
-        with st.chat_message(message["role"]):
-            st.markdown(message["content"])
-    
-    # Générer et ajouter le bouton de téléchargement après chaque nouveau message
-    csv = messages_to_csv(st.session_state.messages)
-    st.download_button(
-        label="Télécharger l'historique au format CSV",
-        data=csv,
-        file_name="chat_history.csv",
-        mime="text/csv",
-    )
