@@ -1,4 +1,5 @@
 import streamlit as st
+from utiles import get_ner
 
 # Création d'un titre
 st.title('Interface-Mistral-AI')
@@ -26,21 +27,20 @@ if st.checkbox('Afficher le contenu'):
 user_name = st.text_input("Quel est votre nom ?")
 
 # Création d'un bouton
-if st.button("Press OK"):
-  st.write(user_name)
+#if st.button("Press OK"):
+#  st.write(user_name)
 
 
 # Image
-st.sidebar.image('https://i.postimg.cc/JhkNw2FH/istockphoto-1398055471-612x612.jpg')
+st.sidebar.image('https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1200px-Google_2015_logo.svg.png')
 
 # Video
-st.sidebar.video("https://www.youtube.com/watch?v=14leJ1fg4Pw")
+st.sidebar.video("https://www.youtube.com/watch?v=sgnrL7yo1TE")
 
 # Cration d'un slider 
 user_age = st.slider("Quel est votre age ?", 18, 99, 30)
 
-st.selectbox("Selectionnez votre pays", ["France", "Espagen", "USA"])
-
+user_country = st.selectbox("Selectionnez votre pays", ["France", "Espagne", "USA"])
 
 
 # Lecture d'un fichier csv avec pandas
@@ -58,4 +58,3 @@ st.download_button(
     file_name="large_df.csv",
     mime="text/csv",
 )
-
