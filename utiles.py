@@ -215,6 +215,43 @@ def get_agent_response(client,prompt:str='Qui es-tu ?', last_interactions=[]):
 
     return response_assistant, last_interactions
 
+
+def get_agent_sentiment_response(client,prompt:str='Qui es-tu ?', last_interactions=[]):
+    """ 
+    Fonction qui retourne la réponse de l'agent et l'historique des interactions.
+    """
+
+    # Requêtte vers l'API (Agent traduction)
+    chat_response = client.agents.complete(
+        agent_id="ag:56f583a3:20241217:sentiment-n:1be886df",
+        messages=last_interactions+[
+
+            {
+                "role": "user",
+                "content": prompt,
+            },
+        ],
+    )
+
+    # Réponse de l'API
+    response_assistant = chat_response.choices[0].message.content
+
+    # Historique des interactions
+    last_interactions += [{
+                            'role' : 'user',
+                            'content': prompt
+                        },
+                        {
+                            'role': 'assistant',
+                            'content': response_assistant
+                        }]
+
+    return response_assistant, last_interactions
+
+
+
+
+
 def training_model_mistral(client,training_file:str, suffix="university_KD"):
     # Envoi du fichier d'entrainement
     training_data = client.files.upload(
