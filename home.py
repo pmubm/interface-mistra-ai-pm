@@ -48,6 +48,6 @@ import pandas as pd
 
 path_url = "https://raw.githubusercontent.com/Quera-fr/My-Credit/refs/heads/main/Analyse%20des%20donn%C3%A9es/test.csv"
 
-df = pd.read_csv(path_url)
+df = pd.read_csv(path_url, sep=';')
 
-st.data_editor(df, delimiter=';')
+edited_df = st.data_editor(df)
