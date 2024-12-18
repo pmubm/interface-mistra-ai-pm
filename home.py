@@ -31,7 +31,7 @@ if st.button("Press OK"):
 
 
 # Image
-st.sidebar.image('https://fr.freepik.com/photos-gratuite/coup-mise-au-point-selective-hibou-aux-grands-yeux-jaunes_11818528.htm#fromView=keyword&page=1&position=4&uuid=93ece653-f771-4112-b130-2e8ee05ef385&new_detail=true')
+st.sidebar.image('https://pixabay.com/fr/photos/biscuits-le-lait-8394894/')
 
 # Video
 st.sidebar.video("https://www.youtube.com/watch?v=14leJ1fg4Pw")
