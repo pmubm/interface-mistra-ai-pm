@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas as pd  # Ajouter pandas pour gérer le CSV
 from utiles import get_ner
 from utiles import get_agent_response
 from utiles import get_agent_sentiment_response
