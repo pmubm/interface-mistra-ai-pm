@@ -27,7 +27,7 @@ for message in st.session_state.messages:
 
 
 # side bar select
-selection = st.sidebar.selectbox("Choisir un agent:", ["Choisir un agent","Traduction", "Sentiments", "Entitees"])
+selection = st.sidebar.selectbox("Choisir un agent:", ["Choisir un agent","Traduction", "Sentiments", "Scrum"])
 if selection == "Choisir un agent":
     st.title("Echo Bot")
 
