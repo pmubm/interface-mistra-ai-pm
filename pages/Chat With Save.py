@@ -1,10 +1,9 @@
 import streamlit as st
-from utiles import get_ner
-from utiles import get_agent_response
-from utiles import get_agent_sentiment_response
-from utiles import get_agent_scrum_response
-
+import pandas as pd  # Ajouter pandas pour gérer le CSV
+from utiles import get_ner, get_agent_response, get_agent_sentiment_response, get_agent_scrum_response
 from mistralai import Mistral
+
+
 
 
 client = Mistral(api_key="ay4EXIYW5M1jqCtssLjyzRnZjkKwbA5f")
@@ -21,7 +20,21 @@ for message in st.session_state.messages:
         st.markdown(message["content"])
 
 
+# Fonction pour convertir les messages en DataFrame
+def messages_to_csv(messages):
+    data = [{"Role": msg["role"], "Message": msg["content"]} for msg in messages]
+    df = pd.DataFrame(data)
+    return df.to_csv(index=False).encode("utf-8")
 
+# Ajouter un bouton pour télécharger l'historique
+if st.session_state.messages:
+    csv = messages_to_csv(st.session_state.messages)
+    st.download_button(
+        label="Télécharger l'historique au format CSV",
+        data=csv,
+        file_name="chat_history.csv",
+        mime="text/csv",
+    )
 
 
 
