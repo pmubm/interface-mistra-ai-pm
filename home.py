@@ -50,4 +50,4 @@ path_url = "https://raw.githubusercontent.com/Quera-fr/My-Credit/refs/heads/main
 
 df = pd.read_csv(path_url)
 
-st.dataeditor(df, delimiter=';')
+st.data_editor(df, delimiter=';')
