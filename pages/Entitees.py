@@ -2,7 +2,7 @@ import streamlit as st
 from utiles import *
 from mistralai import Mistral
 
-st.title('Traduction')
+st.title('Entitees')
 
 api_keys =st.text_input("api_keys")
 client = Mistral(api_keys)
@@ -16,3 +16,8 @@ if st.button("Envoyer"):
     response = get_ner(client,prompt)
     
     st.write(response)
+
+
+    #creer function traduction
+    #analyse sentiments
+    #creer entité nommée
