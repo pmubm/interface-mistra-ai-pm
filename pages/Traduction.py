@@ -7,7 +7,7 @@ st.title('Traduction')
 api_keys =st.text_input("api_keys")
 client = Mistral(api_keys)
 
-prompt = st.test_area("""
+prompt = st.text_area("""
                       
                       
 """)
