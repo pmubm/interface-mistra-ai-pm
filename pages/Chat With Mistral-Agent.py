@@ -23,12 +23,12 @@ for message in st.session_state.messages:
 
 
 # side bar select
-selection = st.sidebar.selectbox("Choisir un agent:", ["Option 1", "Option 2", "Option 3"])
+selection = st.sidebar.selectbox("Choisir un agent:", ["Traduction", "Entitees"])
 
 
-if selection == "Option 1":
+if selection == "Traduction":
     pass
-elif selection == "Option 2":
+elif selection == "Entitees":
     pass
 
 
