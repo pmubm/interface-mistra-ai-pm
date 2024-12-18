@@ -31,7 +31,7 @@ if st.button("Press OK"):
 
 
 # Image
-st.sidebar.image('https://pixabay.com/fr/photos/biscuits-le-lait-8394894/')
+st.sidebar.image('https://ibb.co/27SFt9L')
 
 # Video
 st.sidebar.video("https://www.youtube.com/watch?v=14leJ1fg4Pw")
