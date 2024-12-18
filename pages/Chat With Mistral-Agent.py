@@ -6,7 +6,7 @@ from mistralai import Mistral
 
 client = Mistral(api_key="ay4EXIYW5M1jqCtssLjyzRnZjkKwbA5f")
 
-st.title("Echo Bot")
+
 
 # Initialize chat history
 if "messages" not in st.session_state:
@@ -25,8 +25,9 @@ for message in st.session_state.messages:
 
 # side bar select
 selection = st.sidebar.selectbox("Choisir un agent:", ["Choisir un agent","Traduction", "Entitees"])
-
-
+if selection == "Choisir un agent":
+    st.title("Echo Bot")
+    
 if selection == "Traduction":
     st.title("Echo Bot : Traduction")
     # React to user input
