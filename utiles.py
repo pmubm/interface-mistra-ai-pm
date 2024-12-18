@@ -256,7 +256,7 @@ def get_agent_scrum_response(client,prompt:str='Qui es-tu ?', last_interactions=
 
     # Requêtte vers l'API (Agent traduction)
     chat_response = client.agents.complete(
-        agent_id="ag:56f583a3:20241217:sentiment-n:1be886df",
+        agent_id="ag:56f583a3:20241216:scrum-master:958c674c",
         messages=last_interactions+[
 
             {
