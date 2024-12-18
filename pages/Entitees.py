@@ -8,10 +8,18 @@ chaine_apik = "ay4EXIYW5M1jqCtssLjyzRnZjkKwbA5f"
 text_area_api =st.text_input("api_keys",value=chaine_apik)
 
 client = Mistral(text_area_api)
-texte_par_defaut = """
+texte_par_defaut = """Le "meilleur" fromage français est une question subjective qui dépend des goûts personnels de chacun. La France est célèbre pour sa grande variété de fromages, chacun ayant ses propres caractéristiques uniques en termes de texture, de saveur et de méthode de fabrication. Voici quelques fromages français très appréciés parmi les amateurs de fromage :
 
-Le président Emmanuel Macron a rencontré la chancelière Angela Merkel à Berlin le 10 juillet 2021. Cette rencontre, qui s'est déroulée au siège de la Chancellerie fédérale, avait pour objectif de discuter des enjeux européens, notamment la relance économique post-COVID. Macron a ensuite pris un vol pour New York afin de s'adresser à l'Assemblée générale des Nations Unies le 12 juillet.  Plus tard dans le mois, le 27 juillet, Elon Musk, PDG de Tesla, a annoncé un nouveau partenariat avec Samsung pour la production de batteries. En 2022, Joe Biden, le président des États-Unis, a visité Kyiv en Février. Marie Curie, une scientifique renommée, est née à Varsovie le 7 novembre 1867. Albert Einstein a travaillé à l'Office des brevets à Berne au début du XXe siècle. Microsoft, fondé par Bill Gates et Paul Allen, a lancé Windows 11 le 5 octobre 2021. Le tournoi de Roland-Garros s'est déroulé à Paris en mai 2023. Narendra Modi, le Premier ministre de l'Inde, a visité Paris le 14 juillet 2023, jour de la fête nationale française.  L'Organisation mondiale de la Santé (OMS), basée à Genève, continue de surveiller l'évolution de la pandémie. Le 1er janvier 2024, de nouvelles régulations entreront en vigueur.
+1. **Camembert de Normandie** : Un fromage à pâte molle et à croûte fleurie, originaire de Normandie, avec une texture crémeuse et une saveur douce mais complexe.
+2. **Roquefort** : Un fromage persillé (à pâte bleue) fabriqué à partir de lait de brebis, avec une saveur forte et piquante.
+3. **Brie de Meaux** : Un fromage à pâte molle et à croûte fleurie, originaire de la région de Meaux, avec une texture crémeuse et une saveur douce.
+4. **Comté** : Un fromage à pâte pressée cuite, originaire de la région du Jura, avec une texture ferme et une saveur riche et complexe.
+5. **Reblochon** : Un fromage à pâte pressée non cuite, originaire de la Savoie, avec une texture crémeuse et une saveur douce et fruitée.
+6. **Chèvre (Crottin de Chavignol)** : Un fromage de chèvre, souvent consommé en jeune (fraîche) ou affiné, avec une texture friable et une saveur délicate.
+7. **Munster** : Un fromage à pâte molle et à croûte lavée, originaire des Vosges, avec une texture crémeuse et une saveur forte et aromatique.
+8. **Époisses** : Un fromage à pâte molle et à croûte lavée, originaire de Bourgogne, avec une texture crémeuse et une saveur forte et épicée.
 
+Chacun de ces fromages a ses propres qualités et peut être considéré comme le "meilleur" en fonction des préférences individuelles. La diversité des fromages français permet de satisfaire une grande variété de goûts et de palais. 
 """
 # Affiche le contenu actuel de la boîte de texte
 prompt = st.text_area("Votre texte :", value=texte_par_defaut)
