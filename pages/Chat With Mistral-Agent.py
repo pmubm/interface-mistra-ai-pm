@@ -28,7 +28,7 @@ selection = st.sidebar.selectbox("Choisir un agent:", ["Traduction", "Entitees"]
 
 if selection == "Traduction":
     # React to user input
-    if prompt := st.chat_input("What is up?"):
+    if prompt := st.chat_input("Ecrivez à l'Agent entitée"):
         # Display user message in chat message container
         st.chat_message("user").markdown(prompt)
         # Add user message to chat history
