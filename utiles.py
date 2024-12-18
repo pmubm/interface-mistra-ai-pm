@@ -191,4 +191,4 @@ def training_model_mistral(training_file:str, suffix="university_KD") -> str:
         sleep(5)
         retrieved_jobs = client.fine_tuning.jobs.get(job_id = created_jobs.id)
    
-   return retrieved_jobs.fine_tuned_model
+    return retrieved_jobs.fine_tuned_model
