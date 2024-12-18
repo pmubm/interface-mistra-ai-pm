@@ -1,8 +1,10 @@
 import streamlit as st
-import pandas as pd  # Ajouter pandas pour gérer le CSV
-from utiles import get_ner, get_agent_response, get_agent_sentiment_response, get_agent_scrum_response
-from mistralai import Mistral
+from utiles import get_ner
+from utiles import get_agent_response
+from utiles import get_agent_sentiment_response
+from utiles import get_agent_scrum_response
 
+from mistralai import Mistral
 
 
 client = Mistral(api_key="ay4EXIYW5M1jqCtssLjyzRnZjkKwbA5f")
