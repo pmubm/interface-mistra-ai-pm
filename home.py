@@ -15,7 +15,9 @@ st.write("""
  `print("Hello World")`
 """)
 
-st.text_input("Quel est votre nom ?")
+user_name = st.text_input("Quel est votre nom ?")
+st.write(user_name)
+print(user_name)
 
 # Creation d'un bouton
 
