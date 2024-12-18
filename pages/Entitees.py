@@ -24,7 +24,7 @@ Chacun de ces fromages a ses propres qualités et peut être considéré comme l
 texte = st.text_area("Votre texte :", value=texte_par_defaut)
 
 # Affiche le contenu actuel de la boîte de texte
-st.write("Contenu de la boîte :", texte)
+#st.write("Contenu de la boîte :", texte)
 
 
 
