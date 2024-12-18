@@ -6,8 +6,7 @@ st.title('Entitees')
 #ay4EXIYW5M1jqCtssLjyzRnZjkKwbA5f
 api_keys =st.text_input("api_keys")
 client = Mistral(api_keys)
-texte_par_defaut = """
- Le "meilleur" fromage français est une question subjective qui dépend des goûts personnels de chacun. La France est célèbre pour sa grande variété de fromages, chacun ayant ses propres caractéristiques uniques en termes de texture, de saveur et de méthode de fabrication. Voici quelques fromages français très appréciés parmi les amateurs de fromage :
+texte_par_defaut = """Le "meilleur" fromage français est une question subjective qui dépend des goûts personnels de chacun. La France est célèbre pour sa grande variété de fromages, chacun ayant ses propres caractéristiques uniques en termes de texture, de saveur et de méthode de fabrication. Voici quelques fromages français très appréciés parmi les amateurs de fromage :
 
 1. **Camembert de Normandie** : Un fromage à pâte molle et à croûte fleurie, originaire de Normandie, avec une texture crémeuse et une saveur douce mais complexe.
 2. **Roquefort** : Un fromage persillé (à pâte bleue) fabriqué à partir de lait de brebis, avec une saveur forte et piquante.
