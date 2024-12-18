@@ -31,7 +31,7 @@ if st.button("Press OK"):
 
 
 # Image
-st.sidebar.image('https://ibb.co/27SFt9L')
+st.sidebar.image('https://i.postimg.cc/JhkNw2FH/istockphoto-1398055471-612x612.jpg')
 
 # Video
 st.sidebar.video("https://www.youtube.com/watch?v=14leJ1fg4Pw")
