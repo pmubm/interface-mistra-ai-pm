@@ -4,8 +4,10 @@ from mistralai import Mistral
 
 st.title('Entitees')
 #ay4EXIYW5M1jqCtssLjyzRnZjkKwbA5f
-api_keys =st.text_input("api_keys")
-client = Mistral(api_keys)
+chaine_apik = "ay4EXIYW5M1jqCtssLjyzRnZjkKwbA5f"
+text_area_api =st.text_input("api_keys",value=chaine_apik)
+
+client = Mistral(text_area_api)
 texte_par_defaut = """Le "meilleur" fromage français est une question subjective qui dépend des goûts personnels de chacun. La France est célèbre pour sa grande variété de fromages, chacun ayant ses propres caractéristiques uniques en termes de texture, de saveur et de méthode de fabrication. Voici quelques fromages français très appréciés parmi les amateurs de fromage :
 
 1. **Camembert de Normandie** : Un fromage à pâte molle et à croûte fleurie, originaire de Normandie, avec une texture crémeuse et une saveur douce mais complexe.
@@ -20,7 +22,7 @@ texte_par_defaut = """Le "meilleur" fromage français est une question subjectiv
 Chacun de ces fromages a ses propres qualités et peut être considéré comme le "meilleur" en fonction des préférences individuelles. La diversité des fromages français permet de satisfaire une grande variété de goûts et de palais. 
 """
 # Affiche le contenu actuel de la boîte de texte
-texte = st.text_area("Votre texte :", value=texte_par_defaut)
+prompt = st.text_area("Votre texte :", value=texte_par_defaut)
 
 # Affiche le contenu actuel de la boîte de texte
 #st.write("Contenu de la boîte :", texte)
