@@ -24,10 +24,11 @@ for message in st.session_state.messages:
 
 
 # side bar select
-selection = st.sidebar.selectbox("Choisir un agent:", ["Traduction", "Entitees"])
+selection = st.sidebar.selectbox("Choisir un agent:", ["Choisir un agent","Traduction", "Entitees"])
 
 
 if selection == "Traduction":
+    st.title("Echo Bot : Traduction")
     # React to user input
     if prompt := st.chat_input("Ecrivez à l'Agent Traduction"):
         # Display user message in chat message container
