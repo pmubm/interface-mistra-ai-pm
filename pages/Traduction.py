@@ -2,7 +2,7 @@ import streamlit as st
 from utiles import *
 from mistralai import Mistral
 
-st.title('Entitees')
+st.title('Traductions')
 #ay4EXIYW5M1jqCtssLjyzRnZjkKwbA5f
 api_keys =st.text_input("api_keys")
 client = Mistral(api_keys)
