@@ -27,7 +27,20 @@ selection = st.sidebar.selectbox("Choisir un agent:", ["Traduction", "Entitees"]
 
 
 if selection == "Traduction":
-    pass
+    # React to user input
+    if prompt := st.chat_input("What is up?"):
+        # Display user message in chat message container
+        st.chat_message("user").markdown(prompt)
+        # Add user message to chat history
+        st.session_state.messages.append({"role": "user", "content": prompt})
+        
+        response = get_ner(client, prompt)
+        # Display assistant response in chat message container
+        with st.chat_message("assistant"):
+            st.markdown(response)
+        # Add assistant response to chat history
+        st.session_state.messages.append({"role": "assistant", "content": response})
+    
 elif selection == "Entitees":
     pass
 
@@ -35,7 +48,7 @@ elif selection == "Entitees":
 
 
 
-
+'''
 # React to user input
 if prompt := st.chat_input("What is up?"):
     # Display user message in chat message container
@@ -49,3 +62,5 @@ if prompt := st.chat_input("What is up?"):
         st.markdown(response)
     # Add assistant response to chat history
     st.session_state.messages.append({"role": "assistant", "content": response})
+
+'''
