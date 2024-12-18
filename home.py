@@ -37,6 +37,25 @@ st.sidebar.image('https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Goog
 # Video
 st.sidebar.video("https://www.youtube.com/watch?v=sgnrL7yo1TE")
 
+
+# side bar select
+selection = st.sidebar.selectbox("Choisir une option:", ["Option 1", "Option 2", "Option 3"])
+
+
+if selection == "Option 1":
+    pass
+elif selection == "Option 2":
+    pass
+
+
+
+
+
+
+
+
+
+
 # Cration d'un slider 
 user_age = st.slider("Quel est votre age ?", 18, 99, 30)
 
