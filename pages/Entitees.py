@@ -20,9 +20,13 @@ texte_par_defaut = """
 
 Chacun de ces fromages a ses propres qualités et peut être considéré comme le "meilleur" en fonction des préférences individuelles. La diversité des fromages français permet de satisfaire une grande variété de goûts et de palais. 
 """
+# Affiche le contenu actuel de la boîte de texte
+texte = st.text_area("Votre texte :", value=texte_par_defaut)
+
+# Affiche le contenu actuel de la boîte de texte
+st.write("Contenu de la boîte :", texte)
 
 
-prompt = st.text_area("Votre texte :", value=texte_par_defaut)
 
 if st.button("Envoyer"):
     response = get_ner(client,prompt)
