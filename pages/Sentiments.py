@@ -4,7 +4,7 @@ from mistralai import Mistral
 
 st.title('Entitees')
 #ay4EXIYW5M1jqCtssLjyzRnZjkKwbA5f
-api_keys =st.text_input("api_keys")
+api_keys =st.text_input("api_key")
 client = Mistral(api_keys)
 
 prompt = st.text_area("""
