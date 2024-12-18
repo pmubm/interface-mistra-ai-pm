@@ -188,9 +188,9 @@ def get_agent_response(client,prompt:str='Qui es-tu ?', last_interactions=[]):
     Fonction qui retourne la réponse de l'agent et l'historique des interactions.
     """
 
-    # Requêtte vers l'API (Agent Culture-G)
+    # Requêtte vers l'API (Agent traduction)
     chat_response = client.agents.complete(
-        agent_id="ag:d69536f5:20241216:untitled-agent:8913b746",
+        agent_id="ag:56f583a3:20241217:agent-traduction-5-langues:e76c4767",
         messages=last_interactions+[
 
             {
