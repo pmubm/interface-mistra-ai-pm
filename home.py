@@ -6,7 +6,7 @@ st.title('interface-mistral-ai-pm')
 st.subheader("Mistral AI")
 
 
-st.write("Introduction à mistral AI"
+st.write("Introduction à mistral AI")
 
 st.write("""
 # Titre
