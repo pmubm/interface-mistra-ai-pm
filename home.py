@@ -32,26 +32,10 @@ user_name = st.text_input("Quel est votre nom ?")
 
 
 # Image
-st.sidebar.image('https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1200px-Google_2015_logo.svg.png')
+ #st.sidebar.image('https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1200px-Google_2015_logo.svg.png')
 
 # Video
-st.sidebar.video("https://www.youtube.com/watch?v=sgnrL7yo1TE")
-
-
-# side bar select
-selection = st.sidebar.selectbox("Choisir une option:", ["Option 1", "Option 2", "Option 3"])
-
-
-if selection == "Option 1":
-    pass
-elif selection == "Option 2":
-    pass
-
-
-
-
-
-
+#st.sidebar.video("https://www.youtube.com/watch?v=sgnrL7yo1TE")
 
 
 

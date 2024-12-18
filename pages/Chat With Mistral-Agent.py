@@ -16,6 +16,26 @@ for message in st.session_state.messages:
     with st.chat_message(message["role"]):
         st.markdown(message["content"])
 
+
+
+
+
+
+
+# side bar select
+selection = st.sidebar.selectbox("Choisir un agent:", ["Option 1", "Option 2", "Option 3"])
+
+
+if selection == "Option 1":
+    pass
+elif selection == "Option 2":
+    pass
+
+
+
+
+
+
 # React to user input
 if prompt := st.chat_input("What is up?"):
     # Display user message in chat message container
