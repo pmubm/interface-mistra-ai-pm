@@ -88,6 +88,11 @@ elif selection == "Scrum":
         response, last_interactions = get_agent_scrum_response(client, prompt)
         traduction_results = eval(response)
         #print(traduction_results)
+           # Display assistant response in chat message container
+        with st.chat_message("assistant"):
+            st.markdown(response)
+        # Add assistant response to chat history
+        st.session_state.messages.append({"role": "assistant", "content": response})
 
 
 # Fonction pour convertir les messages en DataFrame
