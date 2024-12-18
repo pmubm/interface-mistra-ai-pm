@@ -129,6 +129,60 @@ def get_sentiment(client,prompt):
     return eval(response.choices[0].message.content)
 
 
+def get_traduction(client,prompt):
+    # Requêtte vers l'API
+    response = client.chat.complete(
+        model='mistral-large-latest',
+        messages=[
+            {
+                # Rôle systeme
+                "role": "system",
+                "content":
+                """
+                    Vous êtes un traducteur automatique multilingue avancé.. Votre objectif est de traduire des textes courts dans 5 langues : français, anglais, espagnol, japonais et allemand. Vous devez retourner un résultat structuré sous la forme d’un dictionnaire JSON contenant les traductions précises et fluides dans chaque langue. Voici le format attendu pour votre réponse :
+
+                    {
+                        "français": "<texte en français>",
+                        "anglais": "<texte en anglais>",
+                        "espagnol": "<texte en espagnol>",
+                        "japonais": "<texte en japonais>",
+                        "allemand": "<texte en allemand>"
+                    }
+
+                    Pour chaque texte fourni en entrée, générez les traductions correspondantes dans toutes les langues mentionnées. Ne faites aucun commentaire ou explication supplémentaire dans vos réponses. Concentrez-vous sur la précision et la fluidité de chaque traduction.
+                """
+                    
+
+            },
+            # Exemple d'interaction
+            {
+                "role": "user",
+                "content": "Bonjour tout le monde, comment allez-vous aujourd'hui ?"
+            },
+            {
+                "role": "assistant",
+                "content": 
+                """
+                    "français": "Bonjour tout le monde, comment allez-vous aujourd'hui ?",
+                    "anglais": "Hello everyone, how are you today?",
+                    "espagnol": "Hola a todos, ¿cómo están hoy?",
+                    "japonais": "皆さん、今日はどうですか？",
+                    "allemand": "Hallo zusammen, wie geht es euch heute?"
+                """
+            },
+            
+            # Envoi du prompt utilisateur
+            {
+                "role": "user",
+                "content": prompt
+            }
+        ],
+        temperature=0.7,
+        max_tokens=100
+    )
+    return eval(response.choices[0].message.content)
+
+
 def get_agent_response(client,prompt:str='Qui es-tu ?', last_interactions=[]):
     """ 
     Fonction qui retourne la réponse de l'agent et l'historique des interactions.
