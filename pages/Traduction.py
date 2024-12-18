@@ -4,5 +4,13 @@ from mistralai import Mistral
 
 api_keys =st.text_imput("apikeys")
 client = Mistral(api_keys)
-st.title('testtt')
+
+prompt = st.test_area("""
+                      
+                      
+""")
+
+response = get_ner(client,prompt)
+
+st.title('Traduction')
 
