@@ -17,10 +17,14 @@ st.write("""
 """)
 
 user_name = st.text_input("Quel est votre nom ?")
-st.write(user_name)
+
 print(user_name)
+
 os.write('testttt')
 os.write(user_name)
+
+
+
 # Creation d'un bouton
 
         
