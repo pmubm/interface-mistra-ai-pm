@@ -4,7 +4,7 @@ from mistralai import Mistral
 
 st.title('Traduction')
 
-api_keys =st.text_imput("api_keys")
+api_keys =st.text_input("api_keys")
 client = Mistral(api_keys)
 
 prompt = st.test_area("""
