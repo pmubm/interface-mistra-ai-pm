@@ -2,6 +2,7 @@ import streamlit as st
 from utiles import get_ner
 from utiles import get_agent_response
 from utiles import get_agent_sentiment_response
+from utiles import get_agent_scrum_response
 
 from mistralai import Mistral
 
@@ -26,7 +27,7 @@ for message in st.session_state.messages:
 
 
 # side bar select
-selection = st.sidebar.selectbox("Choisir un agent:", ["Choisir un agent","Traduction", "Entitees"])
+selection = st.sidebar.selectbox("Choisir un agent:", ["Choisir un agent","Traduction", "Sentiments", "Entitees"])
 if selection == "Choisir un agent":
     st.title("Echo Bot")
 
@@ -73,6 +74,29 @@ elif selection == "Sentiment":
             st.markdown(response)
         # Add assistant response to chat history
         st.session_state.messages.append({"role": "assistant", "content": response})
+
+elif selection == "Entitee":
+    st.title("Echo Bot : Entitee")
+    # React to user input
+    if prompt := st.chat_input("Ecrivez à l'Agent Scrum"):
+        # Display user message in chat message container
+        st.chat_message("user").markdown(prompt)
+        # Add user message to chat history
+        st.session_state.messages.append({"role": "user", "content": prompt})
+        
+        #response = get_ner(client, prompt)
+        response, last_interactions = get_agent_scrum_response(client, prompt)
+        traduction_results = eval(response)
+        #print(traduction_results)
+
+
+
+        # Display assistant response in chat message container
+        with st.chat_message("assistant"):
+            st.markdown(response)
+        # Add assistant response to chat history
+        st.session_state.messages.append({"role": "assistant", "content": response})
+
 
 
 
