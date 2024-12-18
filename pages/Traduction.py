@@ -6,6 +6,12 @@ st.title('Traduction')
 #ay4EXIYW5M1jqCtssLjyzRnZjkKwbA5f
 chaine_apik = "ay4EXIYW5M1jqCtssLjyzRnZjkKwbA5f"
 text_area_api =st.text_input("api_keys",value=chaine_apik)
+st.set_page_config('Le titttre')
+
+
+api_keys = st.secrets("MISTRAL_API")
+
+
 
 client = Mistral(text_area_api)
 texte_par_defaut = """Le "meilleur" fromage français """
