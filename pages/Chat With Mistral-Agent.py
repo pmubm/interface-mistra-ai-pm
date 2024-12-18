@@ -27,7 +27,7 @@ for message in st.session_state.messages:
 
 
 # side bar select
-selection = st.sidebar.selectbox("Choisir un agent:", ["Choisir un agent","Traduction", "Sentiments", "Scrum"])
+selection = st.sidebar.selectbox("Choisir un agent:", ["Choisir un agent","Traduction", "Sentiment", "Scrum"])
 if selection == "Choisir un agent":
     st.title("Echo Bot")
 
@@ -75,7 +75,7 @@ elif selection == "Sentiment":
         # Add assistant response to chat history
         st.session_state.messages.append({"role": "assistant", "content": response})
 
-elif selection == "Entitee":
+elif selection == "Scrum":
     st.title("Echo Bot : Entitee")
     # React to user input
     if prompt := st.chat_input("Ecrivez à l'Agent Scrum"):
